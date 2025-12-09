@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор Мемов</title>
+    <link rel="stylesheet" href="./style/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link rel="icon" href="./images/logo-40.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1><span class="emoji">🎭</span> Генератор Мемов</h1>
+            <p class="tagline">Выбирай картинку, добавляй текст — твой мем готов!</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="panel">
+                <h2><i class="fas fa-plus-circle"></i> Создать новый мем</h2>
+                
+                <h3>Выберите изображение:</h3>
+                <div id="imagesContainer" class="images-grid">
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i> Загрузка изображений...
+                    </div>
+                </div>
+                
+                <form id="createMemeForm" class="meme-form">
+                    <div class="form-group">
+                        <label for="topText"><i class="fas fa-text-height"></i> Верхний текст:</label>
+                        <input type="text" 
+                               id="topText" 
+                               class="form-control" 
+                               placeholder="Введите текст для верха (например: КОГДА ТЫ...)" 
+                               required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bottomText"><i class="fas fa-text-height"></i> Нижний текст:</label>
+                        <input type="text" 
+                               id="bottomText" 
+                               class="form-control" 
+                               placeholder="Введите текст для низа (например: НАКОНЕЦ-ТО СДЕЛАЛ ДЗ)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="author"><i class="fas fa-user"></i> Ваше имя (необязательно):</label>
+                        <input type="text" 
+                               id="author" 
+                               class="form-control" 
+                               placeholder="Автор мема">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-magic"></i> Создать мем!
+                    </button>
+                </form>
+            </div>
+            
+            <div class="panel">
+                <h2><i class="fas fa-images"></i> Ваши созданные мемы</h2>
+                
+                <div id="memesContainer" class="memes-container">
+                    <div class="empty-state" id="emptyState">
+                        <i class="far fa-grin-beam"></i>
+                        <h3>Пока нет мемов</h3>
+                        <p>Создайте свой первый мем, выбрав картинку и добавив текст!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/script.js"></script>
+</body>
+</html>
