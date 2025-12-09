@@ -16,4 +16,11 @@ node server.js
 
 ## Результат
 
+# Начальный экран
+![alt text](image-1.png)
+
+# Создание мема
 ![alt text](image.png)
+
+# Удаление мема
+![alt text](image-1.png)
